@@ -1,0 +1,28 @@
+<div class="container">
+    <h1>Listado de spots</h1>
+    <hr class="mb-3">
+
+    {{#each places}}
+    {{name}}
+    <p>{{type}}</p>
+    <p>{{location.coordinates.[0]}}</p>
+    <p>{{location.coordinates.[1]}}</p>
+    {{!-- BOTÓN PARA VER LOS DETALLES --}}
+    {{!-- <a href="/places/details/{{_id}}" class="btn btn-sm btn-dark">Ver detalles</a> --}}
+
+    {{!-- BOTÓN PARA EDITAR --}}
+    <a href="/places/edit/{{id}}" class="btn btn-sm btn-info">Editar</a>
+
+    {{!-- BOTÓN PARA ELIMINAR (ES UN FORMULARIO DISIMULADO PARA ASEGURAR QUE SEA UN ENDPOINT DE POST, INACCESIBLE A
+    TRAVÉS DE LA URL) --}}
+    <form action="/places/delete/{{_id}}" method="POST" style="display: inline">
+        <input type="submit" value="delete" class="btn btn-sm btn-danger">
+    </form>
+
+    <hr>
+
+    {{/each}}
+
+    <hr>
+    <a href="/" class="btn btn-dark">Volver a inicio</a>
+</div>

@@ -1,0 +1,35 @@
+<div class="container">
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+
+            <h1>Nuevo Spot</h1>
+            <hr>
+
+            <form action="/places/create" method="POST">
+                <div class="mb-3 mt-5">
+                    <label for="namePlace" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="namePlace" name="name">
+                </div>
+
+                <div class="mb-3">
+                    <label for="placesType" class="form-label">type</label>
+                    <input type="text" class="form-control" id="placesType" name="type">
+                </div>
+
+                <div class="mb-3">
+                    <label for="longitude" class="form-label">longitude</label>
+                    <input type="text" class="form-control" id="longitude" name="longitude">
+                </div>
+
+                <div class="mb-3">
+                    <label for="latitude" class="form-label">latitude</label>
+                    <input type="text" class="form-control" id="latitude" name="latitude">
+                </div>
+
+                <button type="submit" class="btn btn-dark">Crear Spot</button>
+            </form>
+
+        </div>
+    </div>
+</div>

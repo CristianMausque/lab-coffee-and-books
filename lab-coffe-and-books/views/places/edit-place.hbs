@@ -1,0 +1,40 @@
+<div class="container">
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+
+            <h1>Edit Spot</h1>
+            <hr>
+
+            <form action="/places/edit/{{id}}" method="POST">
+                <div class="mb-3 mt-5">
+                    <label for="placeTitle" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="placeTitle" name="name" value="{{name}}">
+                </div>
+
+                <div class="mb-3">
+                    <label for="placeDesc" class="form-label">type</label>
+                    <input type="text" class="form-control" id="placeDesc" name="type" value="{{type}}">
+                </div>
+
+                <div class="mb-3">
+                    <label for="longitude" class="form-label">longitude</label>
+                    <input type="text" class="form-control" id="longitude" name="longitude"
+                        value="{{location.coordinates.[0]}}">
+                </div>
+
+                <div class="mb-3">
+                    <label for="latitude" class="form-label">latitude</label>
+                    <input type="text" class="form-control" id="latitude" name="latitude"
+                        value="{{location.coordinates.[1]}}">
+                </div>
+
+
+                <button type="submit" class="btn btn-dark">Editar post</button>
+            </form>
+
+        </div>
+    </div>
+
+
+</div>
